@@ -4,7 +4,12 @@ with open(".\\user_information.txt", "a") as profile_information:
     while True:
         try:
             name = input('What is your full name? : ')
-            age = int(input('How old are you?: '))
+            while True:
+               try:
+                  age = int(input('How old are you?: '))
+                  break
+               except ValueError:
+                  print("Invalid, Please try again")
             gender = input('What is your gender identity? : ')
             address = input('Where do you live? : ')
             email = input('What is your email? : ')
@@ -13,7 +18,12 @@ with open(".\\user_information.txt", "a") as profile_information:
             religion = input('What is your religious belief? : ')
             language = input('What languages do you speak? : ')
             nationality = input('What is your nationality? : ')
-            favorite_number = int(input('What is your favorite number? : '))
+            while True:
+               try:
+                  favorite_number = int(input('What is your favorite number? : '))
+                  break
+               except ValueError:
+                  print("Invalid, Please try again")     
             dream_career = input('What is your dream job? : ')
             dream_destination = input('Where do you want to travel? : ')
             biggest_fear = input('What are you scared the most? : ')
@@ -34,15 +44,16 @@ with open(".\\user_information.txt", "a") as profile_information:
             profile_information.write(f'Favorite number: {favorite_number}\n')
             profile_information.write(f'Dream career: {dream_career}\n')
             profile_information.write(f'Dream destination: {dream_destination}\n')
-            profile_information.write(f'Biggest_fear: {biggest_fear}\n')
+            profile_information.write(f'Biggest fear: {biggest_fear}\n')
             profile_information.write(f'Life motto: {life_motto}\n')
+            profile_information.write("\n \n")
         
 
         except ValueError:
          print('Invalid') 
 
 # Ask user if want to input info again, exit if not
-        another_entry = input('Do you want to input another one? : ')
+        another_entry = input('Do you want to input another one? yes or no : ')
         if another_entry != 'yes':
             break
      
