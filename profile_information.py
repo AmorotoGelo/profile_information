@@ -36,10 +36,13 @@ with open(".\\user_information.txt", "a") as profile_information:
             profile_information.write(f'Dream destination: {dream_destination}\n')
             profile_information.write(f'Biggest_fear: {biggest_fear}\n')
             profile_information.write(f'Life motto: {life_motto}\n')
-            break
+        
 
         except ValueError:
          print('Invalid') 
 
 # Ask user if want to input info again, exit if not
+        another_entry = input('Do you want to input another one? : ')
+        if another_entry != 'yes':
+            break
      
