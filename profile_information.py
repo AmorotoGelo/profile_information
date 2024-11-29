@@ -10,12 +10,15 @@ with open(".\\user_information.txt", "a") as profile_information:
                   break
                except ValueError:
                   print("Invalid, Please try again")
-
-            gender = input('Type xy if you are a man, xx if a woman : ')
-            if gender == 'xy':
-               gender = 'Man'
-            elif gender == 'xx':
-               gender = 'Woman'   
+            while True:  
+                 gender = input('Type xy if you are a man, xx if a woman : ')
+                 if gender == 'xy':
+                   gender = 'Man'
+                 elif gender == 'xx':
+                   gender = 'Woman'
+                   break
+                 else:
+                    print("Invalid, input again")     
 
             address = input('Where do you live? : ')
             hobbies = input('What are your hobbies? : ')
