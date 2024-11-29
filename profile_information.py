@@ -18,16 +18,20 @@ with open(".\\user_information.txt", "a") as profile_information:
                    gender = 'Woman'
                    break
                  else:
-                    print("Invalid, input again")     
+                    print('Invalid, input again')     
 
             address = input('Where do you live? : ')
             hobbies = input('What are your hobbies? : ')
 
-            personality = input('Type shy if you are introvert, loud if extrovert : ')
-            if personality == 'shy':
-               personality = 'Introvert'
-            elif personality == 'loud':
-               personality = 'Extrovert'
+            while True: 
+                 personality = input('Type shy if you are introvert, loud if extrovert : ')
+                 if personality == 'shy':
+                   personality = 'Introvert'
+                 elif personality == 'loud':
+                   personality = 'Extrovert'
+                   break
+                 else:
+                    print('Invalid, input again')   
                
             religion = input('What is your religious belief? : ')
             nationality = input('What is your nationality? : ')
