@@ -14,6 +14,7 @@ with open(".\\user_information.txt", "a") as profile_information:
                  gender = input('Type xy if you are a man, xx if a woman : ')
                  if gender == 'xy':
                    gender = 'Man'
+                   break
                  elif gender == 'xx':
                    gender = 'Woman'
                    break
@@ -27,6 +28,7 @@ with open(".\\user_information.txt", "a") as profile_information:
                  personality = input('Type shy if you are introvert, loud if extrovert : ')
                  if personality == 'shy':
                    personality = 'Introvert'
+                   break
                  elif personality == 'loud':
                    personality = 'Extrovert'
                    break
