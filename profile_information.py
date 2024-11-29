@@ -36,11 +36,6 @@ with open(".\\user_information.txt", "a") as profile_information:
                   print("Invalid, Please try again")     
             dream_career = input('What is your dream job? : ')
             
-            
-            
-            
-                                    
-        
         # Writing informations in text file
             profile_information.write(f'Name: {name}\n')
             profile_information.write(f'Age: {age}\n')
@@ -53,7 +48,6 @@ with open(".\\user_information.txt", "a") as profile_information:
             profile_information.write(f'Dream career: {dream_career}\n')
             profile_information.write("\n \n")
         
-
         except ValueError:
          print('Invalid') 
 
